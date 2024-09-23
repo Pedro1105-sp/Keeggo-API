@@ -1,0 +1,82 @@
+[
+  {
+    "description": "    Como usuário quero alterar produto na aplicação utilizando API",
+    "keyword": "Feature",
+    "name": "Alterar Produto",
+    "line": 1,
+    "id": "alterar-produto",
+    "tags": [],
+    "uri": "put.feature",
+    "elements": [
+      {
+        "id": "alterar-produto;ct003---alterar-produto",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "CT003 - ALTERAR PRODUTO",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "que acesso a aplicação como administrador",
+            "result": {
+              "status": "passed",
+              "duration": 304000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "que altero um produto",
+            "result": {
+              "status": "failed",
+              "duration": 242000000,
+              "error_message": "CypressError: `cy.request()` failed on:\n\nhttps://www.advantageonlineshopping.com/catalog/api/v1/product/image/807233898/ariel/pink?product_id=1\n\nThe response we received from your web server was:\n\n  > 500: Internal Server Error\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://www.advantageonlineshopping.com/catalog/api/v1/product/image/807233898/ariel/pink?product_id=1\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"accept\": \"*/*\",\n  \"Content-Type\": \"multipart/form-data\",\n  \"Authorization\": \"Bearer undefined\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.14.2 Chrome/118.0.5993.159 Electron/27.3.10 Safari/537.36\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 41\n}\nBody: {\"FormData\":\"../../../fixtures/URUS.jpg\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 500 - Internal Server Error\nHeaders: {\n  \"server\": \"nginx/1.18.0 (Ubuntu)\",\n  \"date\": \"Mon, 23 Sep 2024 16:24:11 GMT\",\n  \"content-type\": \"application/json\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"vary\": \"accept-encoding\",\n  \"content-encoding\": \"gzip\",\n  \"strict-transport-security\": \"max-age=31536000; includeSubDomains; preload\"\n}\nBody: {\n  \"timestamp\": 1727108651603,\n  \"status\": 500,\n  \"error\": \"Internal Server Error\",\n  \"path\": \"/catalog/api/v1/product/image/807233898/ariel/pink\"\n}\n\n    at <unknown> (http://localhost:56287/__cypress/runner/cypress_runner.js:133224:72)\n    at tryCatcher (http://localhost:56287/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:56287/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:56287/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:56287/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:56287/__cypress/runner/cypress_runner.js:1701:18)\n    at _drainQueueStep (http://localhost:56287/__cypress/runner/cypress_runner.js:2407:12)\nFrom previous event:\n    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (http://localhost:56287/__cypress/runner/cypress_runner.js:3486:19)\n    at Promise._then (http://localhost:56287/__cypress/runner/cypress_runner.js:1239:17)\n    at Promise._passThrough (http://localhost:56287/__cypress/runner/cypress_runner.js:4110:17)\n    at Promise.lastly.Promise.finally (http://localhost:56287/__cypress/runner/cypress_runner.js:4119:17)\n    at Object.onRunnableRun (http://localhost:56287/__cypress/runner/cypress_runner.js:163227:53)\n    at $Cypress.action (http://localhost:56287/__cypress/runner/cypress_runner.js:41459:28)\n    at Runnable.run (http://localhost:56287/__cypress/runner/cypress_runner.js:145815:13)\n    at next (http://localhost:56287/__cypress/runner/cypress_runner.js:155600:10)\n    at <unknown> (http://localhost:56287/__cypress/runner/cypress_runner.js:155644:5)\n    at timeslice (http://localhost:56287/__cypress/runner/cypress_runner.js:146155:27)\nFrom Your Spec Code:\n    at alterar.alterarProduto (cypress/e2e/pages/putP/index.js:22:11)\n    at Context.eval (cypress/e2e/steps/put/putSteps.js:11:11)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "o sistema exibe o status 200",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "alterar-produto;ct004---verificar-id-da-nova-imagem-alterada-do-produto",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "CT004 - VERIFICAR ID DA NOVA IMAGEM ALTERADA DO PRODUTO",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "que altero um produto",
+            "result": {
+              "status": "failed",
+              "error_message": "CypressError: `cy.request()` failed on:\n\nhttps://www.advantageonlineshopping.com/catalog/api/v1/product/image/807233898/ariel/pink?product_id=1\n\nThe response we received from your web server was:\n\n  > 500: Internal Server Error\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://www.advantageonlineshopping.com/catalog/api/v1/product/image/807233898/ariel/pink?product_id=1\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"accept\": \"*/*\",\n  \"Content-Type\": \"multipart/form-data\",\n  \"Authorization\": \"Bearer undefined\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.14.2 Chrome/118.0.5993.159 Electron/27.3.10 Safari/537.36\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 41\n}\nBody: {\"FormData\":\"../../../fixtures/URUS.jpg\"}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 500 - Internal Server Error\nHeaders: {\n  \"server\": \"nginx/1.18.0 (Ubuntu)\",\n  \"date\": \"Mon, 23 Sep 2024 16:24:11 GMT\",\n  \"content-type\": \"application/json\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"vary\": \"accept-encoding\",\n  \"content-encoding\": \"gzip\",\n  \"strict-transport-security\": \"max-age=31536000; includeSubDomains; preload\"\n}\nBody: {\n  \"timestamp\": 1727108651856,\n  \"status\": 500,\n  \"error\": \"Internal Server Error\",\n  \"path\": \"/catalog/api/v1/product/image/807233898/ariel/pink\"\n}\n\n    at <unknown> (http://localhost:56287/__cypress/runner/cypress_runner.js:133224:72)\n    at tryCatcher (http://localhost:56287/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:56287/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:56287/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:56287/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:56287/__cypress/runner/cypress_runner.js:1701:18)\n    at _drainQueueStep (http://localhost:56287/__cypress/runner/cypress_runner.js:2407:12)\nFrom previous event:\n    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (http://localhost:56287/__cypress/runner/cypress_runner.js:3486:19)\n    at Promise._then (http://localhost:56287/__cypress/runner/cypress_runner.js:1239:17)\n    at Promise._passThrough (http://localhost:56287/__cypress/runner/cypress_runner.js:4110:17)\n    at Promise.lastly.Promise.finally (http://localhost:56287/__cypress/runner/cypress_runner.js:4119:17)\n    at Object.onRunnableRun (http://localhost:56287/__cypress/runner/cypress_runner.js:163227:53)\n    at $Cypress.action (http://localhost:56287/__cypress/runner/cypress_runner.js:41459:28)\n    at Runnable.run (http://localhost:56287/__cypress/runner/cypress_runner.js:145815:13)\n    at next (http://localhost:56287/__cypress/runner/cypress_runner.js:155600:10)\n    at <unknown> (http://localhost:56287/__cypress/runner/cypress_runner.js:155644:5)\n    at timeslice (http://localhost:56287/__cypress/runner/cypress_runner.js:146155:27)\nFrom Your Spec Code:\n    at alterar.alterarProduto (cypress/e2e/pages/putP/index.js:22:11)\n    at Context.eval (cypress/e2e/steps/put/putSteps.js:11:11)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "verifico se o id da imagem alterada é atualizada",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

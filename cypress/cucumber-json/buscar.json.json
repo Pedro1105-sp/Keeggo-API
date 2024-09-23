@@ -1,0 +1,42 @@
+[
+  {
+    "description": "    Como usuário quero buscar produto na aplicação utilizando API",
+    "keyword": "Feature",
+    "name": "Buscar Produto",
+    "line": 1,
+    "id": "buscar-produto",
+    "tags": [],
+    "uri": "buscar.feature",
+    "elements": [
+      {
+        "id": "buscar-produto;ct001---verificar-se-exibe-produtos-não-realizando-nenhuma-busca",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "CT001 - VERIFICAR SE EXIBE PRODUTOS NÃO REALIZANDO NENHUMA BUSCA",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "que realizo uma busca informando nenhum produto v1/products/search",
+            "result": {
+              "status": "undefined",
+              "duration": 61000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "o sistema exibe o status 500",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

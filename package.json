@@ -1,0 +1,22 @@
+{
+  "name": "Desafio_API",
+  "version": "1.0.0",
+  "description": "Teste Desafio de API Keeggo",
+  "main": "index.js",
+  "author": "Pedro Henrique Alves",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.14.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/steps",
+    "cucumberJson": {
+      "generate": "true",
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".json"
+  }
+  }
+}

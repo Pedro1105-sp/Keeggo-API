@@ -1,0 +1,73 @@
+[
+  {
+    "description": "    Como usuário quero buscar produto na aplicação utilizando API",
+    "keyword": "Feature",
+    "name": "Buscar Produto",
+    "line": 1,
+    "id": "buscar-produto",
+    "tags": [],
+    "uri": "get.feature",
+    "elements": [
+      {
+        "id": "buscar-produto;ct001---verificar-se-exibe-produtos-inexistente-busca",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "CT001 - VERIFICAR SE EXIBE PRODUTOS INEXISTENTE BUSCA",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "que realizo uma busca informando produto inexistente",
+            "result": {
+              "status": "passed",
+              "duration": 1484000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "o sistema exibe o status 200",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "buscar-produto;ct002---verificar-se-exibe-produtos-buscado-\"laptop\"",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "CT002 - VERIFICAR SE EXIBE PRODUTOS BUSCADO \"LAPTOP\"",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "que realizo uma busca informando produto o laptop",
+            "result": {
+              "status": "passed",
+              "duration": 826000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "o sistema exibe o status 200",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
